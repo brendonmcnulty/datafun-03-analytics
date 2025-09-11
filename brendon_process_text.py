@@ -21,8 +21,8 @@ from utils_logger import logger
 #####################################
 
 # TODO: Replace with the names of your folders
-FETCHED_DATA_DIR: str = "example_data"
-PROCESSED_DIR: str = "example_processed"
+FETCHED_DATA_DIR: str = "brendon_data"
+PROCESSED_DIR: str = "brendon_processed"
 
 #####################################
 # Define Functions
