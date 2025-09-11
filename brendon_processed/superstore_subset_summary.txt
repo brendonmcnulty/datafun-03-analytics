@@ -1,0 +1,1 @@
+Superstore — occurrences of Category='Paper' in column K: 1379
