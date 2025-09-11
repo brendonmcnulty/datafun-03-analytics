@@ -1,7 +1,7 @@
 """
-This example file fetches JSON data of astronauts currently in space 
-from the web and saves it to a local file named example_data/astronauts.json.
+Fetch JSON of dog breeds from the Dog CEO API and save it to brendon_data/dog_breeds.json.
 
+Note: Ensure utils_logger.py is in the same folder as this file.
 
 """
 
@@ -93,9 +93,9 @@ def main():
     """
     Main function to demonstrate fetching JSON data.
     """
-    json_url = 'http://api.open-notify.org/astros.json'
-    logger.info("Starting JSON fetch demonstration...")
-    fetch_json_file(FETCHED_DATA_DIR, "astros.json", json_url)
+    json_url = "https://dog.ceo/api/breeds/list/all"
+    logger.info("Starting JSON fetch (dog breeds)...")
+    fetch_json_file(FETCHED_DATA_DIR, "dog_breeds.json", json_url)
 
 #####################################
 # Conditional Execution
