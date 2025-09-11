@@ -1,24 +1,13 @@
 """
-Process a JSON file to count astronauts by spacecraft and save the result.
+Process dog_breeds.json from the Dog CEO API to summarize:
+- total number of breeds
+- total number of sub-breeds
+- a sample list of breed names.
 
-JSON file is in the format where people is a list of dictionaries with keys "craft" and "name".
-
-{
-    "people": [
-        {
-            "craft": "ISS",
-            "name": "Oleg Kononenko"
-        },
-        {
-            "craft": "ISS",
-            "name": "Nikolai Chub"
-        }
-    ],
-    "number": 2,
-    "message": "success"
-}
-
+JSON structure example:
+{"message": {breed: [subbreeds...]}, "status": "success"}
 """
+
 
 #####################################
 # Import Modules
