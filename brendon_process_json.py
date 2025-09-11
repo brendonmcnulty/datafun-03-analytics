@@ -36,42 +36,23 @@ PROCESSED_DIR: str = "brendon_processed"
 # Define Functions
 #####################################
 
-# TODO: Add or replace this with a function that reads and processes your JSON file
-
-def count_astronauts_by_craft(file_path: pathlib.Path) -> dict:
-    """Count the number of astronauts on each spacecraft from a JSON file."""
+def summarize_dog_breeds(file_path: pathlib.Path) -> dict:
+    """Summarize dog breeds JSON: total breeds, total sub-breeds, sample listing."""
     try:
-        # Open the JSON file using the file_path passed in as an argument
-        with file_path.open('r') as file:
-
-            # Use the json module load() function 
-            # to read data file into a Python dictionary
-            astronaut_dictionary = json.load(file)  
-
-            # initialize an empty dictionary to store the counts
-            craft_counts_dictionary = {}
-
-            # people is a list of dictionaries in the JSON file
-            # We can get it using the get() method and pass in the key "people"
-            people_list: list = astronaut_dictionary.get("people", [])
-
-            # For each person in the list, get the craft and count them
-            for person_dictionary in people_list:  
-
-                # Get the craft from the person dictionary
-                # If the key "craft" is not found, default to "Unknown"
-                craft = person_dictionary.get("craft", "Unknown")
-
-                # Update the craft counts dictionary for that craft
-                # If the craft is not in the dictionary, initialize it to 0
-                # Add 1 to the count for the current craft
-                craft_counts_dictionary[craft] = craft_counts_dictionary.get(craft, 0) + 1
-
-            # Return the dictionary with counts of astronauts by spacecraft    
-            return craft_counts_dictionary
+        with file_path.open('r', encoding='utf-8') as f:
+            data = json.load(f)  # {"message": {breed: [subbreeds...]}, "status": "success"}
+        breeds: dict = data.get("message", {})
+        total_breeds = len(breeds)
+        total_subbreeds = sum(len(subs) for subs in breeds.values())
+        sample_breeds = sorted(breeds.keys())[:10]
+        return {
+            "total_breeds": total_breeds,
+            "total_subbreeds": total_subbreeds,
+            "sample_breeds": sample_breeds,
+        }
     except Exception as e:
         logger.error(f"Error reading or processing JSON file: {e}")
-        return {} # return an empty dictionary in case of error
+        return {}
 
 def process_json_file():
     """Read a JSON file, count astronauts by spacecraft, and save the result."""
