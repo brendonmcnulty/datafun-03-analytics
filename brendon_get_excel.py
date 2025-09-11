@@ -1,9 +1,13 @@
 """
-This file fetches an Excel file (sample products dataset) from the web 
-and saves it to a local file named products.xlsx in a folder named brendon_data.
+Fetch the Tableau Superstore Subset Excel dataset from the web
+and save it locally as superstore_subset.xlsx in the brendon_data folder.
+
+This dataset contains sample sales records (orders, categories, regions, etc.)
+commonly used for practicing data analysis and visualization.
 
 Note: Ensure utils_logger.py is in the same folder as this file.
 """
+
 
 
 #####################################
@@ -90,12 +94,11 @@ def write_excel_file(folder_name: str, filename: str, binary_data: bytes) -> Non
 #####################################
 
 def main():
-    """
-    Main function to fetch a sample products Excel dataset.
-    """
-    excel_url = "https://github.com/datablist/sample-csv-files/raw/main/files/products/products-100.xlsx"
-    logger.info("Starting Excel fetch (sample products dataset)...")
-    fetch_excel_file(FETCHED_DATA_DIR, "products.xlsx", excel_url)
+    """Fetch a sample Superstore Excel dataset (XLSX)."""
+    excel_url = "https://www.tableau.com/sites/default/files/pages/sample-superstore-subset-excel.xlsx"
+    logger.info("Starting Excel fetch (Superstore subset)...")
+    fetch_excel_file(FETCHED_DATA_DIR, "superstore_subset.xlsx", excel_url)
+
 
 
 #####################################
