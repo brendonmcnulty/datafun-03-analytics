@@ -1,0 +1,14 @@
+Dog Breeds Summary
+Total breeds: 107
+Total sub-breeds: 94
+Sample breeds (first 10):
+- affenpinscher
+- african
+- airedale
+- akita
+- appenzeller
+- australian
+- bakharwal
+- basenji
+- beagle
+- bluetick
