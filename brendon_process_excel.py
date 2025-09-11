@@ -53,11 +53,9 @@ def process_excel_file():
 
     output_file = pathlib.Path(PROCESSED_DIR, "superstore_subset_summary.txt")
 
-    # TODO: Replace with the appropriate column letter for your Excel data file
-    column_to_check = "A"  
+    column_to_check = "K"  
 
-    # TODO: Replace with the word you want to count from your Excel file
-    word_to_count = "GitHub"
+    word_to_count = "Paper"
 
     # Call the function to count occurrences of the word in the specified column
     word_count = count_word_in_column(input_file, column_to_check, word_to_count)
@@ -67,8 +65,9 @@ def process_excel_file():
     
     # Open the output file in write mode and write the results
     with output_file.open('w') as file:
-        # TODO: Update the output to describe your results
-        file.write(f"Occurrences of '{word_to_count}' in column {column_to_check}: {word_count}\n")
+       file.write(
+    f"Superstore — occurrences of Category='{word_to_count}' in column {column_to_check}: {word_count}\n"
+)
     
     # Log the processing of the Excel file    
     logger.info(f"Processed Excel file: {input_file}, Word count saved to: {output_file}")
