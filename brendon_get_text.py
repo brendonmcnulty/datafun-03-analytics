@@ -93,10 +93,9 @@ def main():
     """
     Main function to demonstrate fetching text data.
     """
-    txt_url = "https://www.gutenberg.org/cache/epub/1661/pg1661.txt"  # Sherlock Holmes
-    fetch_txt_file(FETCHED_DATA_DIR, "sherlock.txt", txt_url)
+    txt_url = "https://www.w3.org/TR/PNG/iso_8859-1.txt"
     logger.info("Starting text fetch demonstration...")
-    fetch_txt_file(FETCHED_DATA_DIR, "romeo.txt", txt_url)
+    fetch_txt_file(FETCHED_DATA_DIR, "w3c_sample.txt", txt_url)
 
 #####################################
 # Conditional Execution
