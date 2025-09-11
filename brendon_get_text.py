@@ -93,9 +93,9 @@ def main():
     """
     Main function to demonstrate fetching text data.
     """
-    txt_url = "https://www.w3.org/TR/PNG/iso_8859-1.txt"
+    txt_url = "https://www.w3.org/TR/2003/REC-PNG-20031110/iso_8859-1.txt"
     logger.info("Starting text fetch demonstration...")
-    fetch_txt_file(FETCHED_DATA_DIR, "w3c_sample.txt", txt_url)
+    fetch_txt_file(FETCHED_DATA_DIR, "w3c_iso_8859-1.txt", txt_url)
 
 #####################################
 # Conditional Execution
