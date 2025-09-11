@@ -55,29 +55,21 @@ def summarize_dog_breeds(file_path: pathlib.Path) -> dict:
         return {}
 
 def process_json_file():
-    """Read a JSON file, count astronauts by spacecraft, and save the result."""
+    """Read dog_breeds.json, summarize breeds and sub-breeds, and save results."""
+    input_file: pathlib.Path = pathlib.Path(FETCHED_DATA_DIR, "dog_breeds.json")
+    output_file: pathlib.Path = pathlib.Path(PROCESSED_DIR, "dog_breeds_summary.txt")
 
-    # TODO: Replace with path to your JSON data file
-    input_file: pathlib.Path = pathlib.Path(FETCHED_DATA_DIR, "astros.json")
+    stats = summarize_dog_breeds(input_file)
 
-    # TODO: Replace with path to your JSON processed file
-    output_file: pathlib.Path = pathlib.Path(PROCESSED_DIR, "json_astronauts_by_craft.txt")
-    
-    # TODO: Call your new function to process YOUR JSON file
-    # TODO: Create a new local variable to store the result of the function call
-    craft_counts = count_astronauts_by_craft(input_file)
-
-    # Create the output directory if it doesn't exist
     output_file.parent.mkdir(parents=True, exist_ok=True)
-    
-    # Open the output file in write mode and write the results
-    with output_file.open('w') as file:
-        # TODO: Update the output to describe your results
-        file.write("Astronauts by spacecraft:\n")
-        for craft, count in craft_counts.items():
-            file.write(f"{craft}: {count}\n")
-    
-    # Log the processing of the JSON file
+    with output_file.open('w', encoding='utf-8') as file:
+        file.write("Dog Breeds Summary\n")
+        file.write(f"Total breeds: {stats.get('total_breeds', 0)}\n")
+        file.write(f"Total sub-breeds: {stats.get('total_subbreeds', 0)}\n")
+        file.write("Sample breeds (first 10):\n")
+        for b in stats.get("sample_breeds", []):
+            file.write(f"- {b}\n")
+
     logger.info(f"Processed JSON file: {input_file}, Results saved to: {output_file}")
 
 #####################################
