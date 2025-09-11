@@ -27,7 +27,7 @@ from utils_logger import logger
 # Declare Global Variables
 #####################################
 
-FETCHED_DATA_DIR = "example_data"
+FETCHED_DATA_DIR = "brendon_data"
 
 #####################################
 # Define Functions
@@ -93,7 +93,8 @@ def main():
     """
     Main function to demonstrate fetching text data.
     """
-    txt_url = 'https://raw.githubusercontent.com/denisecase/datafun-03-analytics/main/hosted/romeo.txt'
+    txt_url = "https://www.gutenberg.org/cache/epub/1661/pg1661.txt"  # Sherlock Holmes
+    fetch_txt_file(FETCHED_DATA_DIR, "sherlock.txt", txt_url)
     logger.info("Starting text fetch demonstration...")
     fetch_txt_file(FETCHED_DATA_DIR, "romeo.txt", txt_url)
 
