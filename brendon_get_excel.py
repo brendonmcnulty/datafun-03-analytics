@@ -1,10 +1,10 @@
 """
-This example file fetches an Excel file from the web 
-and saves it to a local file named feedback.xlsx in a folder named example_data.
+This file fetches an Excel file (sample products dataset) from the web 
+and saves it to a local file named products.xlsx in a folder named brendon_data.
 
-Please save a copy of the provided utils_logger.py file 
-in the same folder as this file.
+Note: Ensure utils_logger.py is in the same folder as this file.
 """
+
 
 #####################################
 # Import Modules at the Top
@@ -27,7 +27,7 @@ from utils_logger import logger
 # Declare Global Variables
 #####################################
 
-FETCHED_DATA_DIR = "example_data"
+FETCHED_DATA_DIR = "brendon_data"
 
 #####################################
 # Define Functions
