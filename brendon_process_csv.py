@@ -33,8 +33,8 @@ PROCESSED_DIR: str = "brendon_processed"
 
 
 
-def analyze_ladder_score(file_path: pathlib.Path) -> dict:
-    """Analyze the Ladder score column to calculate min, max, mean, and stdev."""
+def analyze_sepal_length(file_path: pathlib.Path) -> dict:
+    """Analyze the Sepal Length column to calculate min, max, mean, and stdev."""
     try:
         # initialize an empty list to store the scores
         score_list = []
@@ -69,10 +69,9 @@ def process_csv_file():
     
     output_file = pathlib.Path(PROCESSED_DIR, "iris_sepal_length_stats.txt")
 
-    
-    # TODO: Call your new function to process YOUR CSV file
-    # TODO: Create a new local variable to store the result of the function call
-    stats = analyze_ladder_score(input_file)
+    stats = analyze_sepal_length(input_file)
+
+
 
     # Create the output directory if it doesn't exist
     output_file.parent.mkdir(parents=True, exist_ok=True)
