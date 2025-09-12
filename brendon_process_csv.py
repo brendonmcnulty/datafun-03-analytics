@@ -43,7 +43,7 @@ def analyze_ladder_score(file_path: pathlib.Path) -> dict:
             dict_reader = csv.DictReader(file)  
             for row in dict_reader:
                 try:
-                    score = float(row["Ladder score"])  # Extract and convert to float
+                    score = float(row["sepal_length"])  # Extract and convert to float
                     # append the score to the list
                     score_list.append(score)
                 except ValueError as e:
