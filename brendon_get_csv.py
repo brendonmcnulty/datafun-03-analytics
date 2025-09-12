@@ -95,7 +95,8 @@ def main():
     """
     csv_url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
     logger.info("Starting CSV fetch demonstration...")
-    fetch_csv_file(FETCHED_DATA_DIR, "2020_happiness.csv", csv_url)
+    fetch_csv_file(FETCHED_DATA_DIR, "iris.csv", csv_url)
+
 
 #####################################
 # Conditional Execution
