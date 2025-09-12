@@ -1,0 +1,5 @@
+Iris — sepal_length statistics:
+Minimum: 4.30
+Maximum: 7.90
+Mean: 5.84
+Standard Deviation: 0.83
