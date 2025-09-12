@@ -67,8 +67,8 @@ def process_csv_file():
 
     input_file = pathlib.Path(FETCHED_DATA_DIR, "iris.csv")
     
-    # TODO: Replace with path to your CSV processed file
-    output_file = pathlib.Path(PROCESSED_DIR, "happiness_ladder_score_stats.txt")
+    output_file = pathlib.Path(PROCESSED_DIR, "iris_sepal_length_stats.txt")
+
     
     # TODO: Call your new function to process YOUR CSV file
     # TODO: Create a new local variable to store the result of the function call
