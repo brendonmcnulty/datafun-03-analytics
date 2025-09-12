@@ -1,10 +1,7 @@
 """
-This example file fetches a CSV file from the web 
-and saves it to a local file named 2020_happiness.csv in a folder named example_data.
+This example file fetches the Iris CSV from the web 
+and saves it to a local file named iris.csv in a folder named brendon_data.
 
-For best results, add the provided utils_logger.py file 
-to the same folder as this file.
-"""
 
 #####################################
 # Import Modules at the Top
